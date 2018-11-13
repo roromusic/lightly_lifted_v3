@@ -8,7 +8,8 @@ import logo from '../images/logo.svg'
 const css = (...args) => ({ className: emoCSS(...args) })
 
 const Container = styled('header')`
-  height: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 10px;
   display: flex;
 `

@@ -19,3 +19,7 @@ a {
 a:visited {
   color: var(--body-text);
 }
+
+h1 {
+  font-size: 2.6rem;
+}
