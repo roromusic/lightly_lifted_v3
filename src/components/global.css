@@ -8,4 +8,14 @@ body {
   --body-text-blue: #313945;
   --yellow-link: #ff990f;
   --blue-bg: #d9ffff;
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--body-text);
+}
+
+a:visited {
+  color: var(--body-text);
 }

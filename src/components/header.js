@@ -1,33 +1,39 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { css as emoCSS } from 'emotion'
+import styled from 'react-emotion'
+
+import logo from '../images/logo.svg'
+
+const css = (...args) => ({ className: emoCSS(...args) })
+
+const Container = styled('header')`
+  height: 50px;
+  padding: 10px;
+  display: flex;
+`
+
+const NavItems = styled('ul')`
+  font-size: 1.2rem;
+  color: var(--body-text);
+  list-style: none;
+`
 
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <Container>
+    <div>
+      <Link to="/">
+        <img src={logo} alt="Lightly Lifted" {...css({ height: '40px' })} />
+      </Link>
     </div>
-  </div>
+    <nav>
+      <NavItems>
+        <li>
+          <Link to="#footer">CONTACT US</Link>
+        </li>
+      </NavItems>
+    </nav>
+  </Container>
 )
 
 export default Header
