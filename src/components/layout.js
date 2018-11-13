@@ -2,9 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import 'typeface-fira-sans'
 
 import Header from './header'
 import './normalize.css'
+import './global.css'
 
 const Layout = ({ children }) => (
   <StaticQuery

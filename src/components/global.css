@@ -1,0 +1,11 @@
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+:root {
+  --body-text: #3b3b3b;
+  --yellow: #ffc429;
+  --body-text-blue: #313945;
+  --yellow-link: #ff990f;
+  --blue-bg: #d9ffff;
+}
