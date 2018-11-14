@@ -6,6 +6,10 @@ import { css as emoCSS } from 'emotion'
 import Layout from '../components/layout'
 import heroBg from '../images/hero.jpg'
 import bottleS from '../images/bottle-s.png'
+import cocktail from '../images/cocktail.svg'
+import mind from '../images/mind.svg'
+import heart from '../images/heart.svg'
+import fireworks from '../images/fireworks.svg'
 
 const css = (...args) => ({ className: emoCSS(...args) })
 
@@ -17,6 +21,17 @@ const Wrapper = styled('div')`
   max-width: 1000px;
   margin: 0 auto;
   padding: 10px;
+`
+const Section = styled('div')`
+  margin: 40px 0;
+`
+
+const Card = styled('div')`
+  box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 20px 0;
 `
 
 const IndexPage = () => (
@@ -59,6 +74,28 @@ const IndexPage = () => (
         </span>
       </Wrapper>
     </Hero>
+    <Section>
+      <Wrapper>
+        <div>
+          <Card>
+            <img src={cocktail} alt="cocktail" height="90px" />
+            <p>Add it to your first cocktail instead of having a second</p>
+          </Card>
+          <Card>
+            <img src={mind} alt="clear mind" height="90px" />
+            <p>Enhance your mood and experiences</p>
+          </Card>
+          <Card>
+            <img src={heart} alt="happy heart" height="90px" />
+            <p>Enjoy cannabis without the smoke smell, chemicals or sugars</p>
+          </Card>
+          <Card>
+            <img src={fireworks} alt="fireworks" height="90px" />
+            <p>Brighten the everyday.</p>
+          </Card>
+        </div>
+      </Wrapper>
+    </Section>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )
