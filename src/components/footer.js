@@ -12,11 +12,10 @@ const Footer = () => {
     <div
       id="footer"
       {...css({
-        fontSize: '14px',
         '@media (min-width: 700px)': { padding: '40px' },
       })}
     >
-      <div {...css({ textAlign: 'center' })}>
+      <div {...css({ textAlign: 'center', p: { fontSize: '14px' } })}>
         <img src={logo} alt="lightly lifted" width="150px" />
         <p>
           ©2018
@@ -30,7 +29,7 @@ const Footer = () => {
           (415)-577-3702
         </p>
       </div>
-      <div {...css({ padding: '10px' })}>
+      <div {...css({ padding: '10px', p: { fontSize: '14px' } })}>
         <p>
           Prop 65
           <br />

@@ -6,6 +6,7 @@ import { css as emoCSS } from 'emotion'
 import Layout from '../components/layout'
 import heroBg from '../images/hero.jpg'
 import bottleS from '../images/bottle-s.png'
+import bottleL from '../images/bottle-l.png'
 import cocktail from '../images/cocktail.svg'
 import mind from '../images/mind.svg'
 import heart from '../images/heart.svg'
@@ -33,6 +34,10 @@ const Wrapper = styled('div')`
   @media (min-width: 700px) {
     padding: 40px;
   }
+
+  @media (min-width: 100px) {
+    padding: 60px;
+  }
 `
 const Section = styled('div')`
   margin: 40px 0;
@@ -51,6 +56,11 @@ const Card = styled('div')`
   p {
     width: 200px;
     font-size: 1.4rem;
+
+    @media (min-width: 1000px) {
+      width: 160px;
+      font-size: 1.5rem;
+    }
   }
 `
 
@@ -116,9 +126,12 @@ const IndexPage = () => (
           })}
         >
           <img
-            src={bottleS}
+            src={bottleL}
             alt="Lightly Lifted Bottle"
-            {...css({ width: '79px' })}
+            {...css({
+              width: '79px',
+              '@media (min-width: 1000px)': { width: '132px' },
+            })}
           />
         </div>
         <div
@@ -133,13 +146,17 @@ const IndexPage = () => (
           <p
             {...css({
               fontSize: '1.5rem',
-              maxWidth: '70%',
               margin: '0 auto',
 
               '@media (min-width: 700px)': {
                 margin: '0',
                 marginBottom: '10px',
                 maxWidth: '100%',
+              },
+
+              '@media (min-width: 1000px)': {
+                fontSize: '2rem',
+                marginBottom: '20px',
               },
             })}
           >
@@ -215,7 +232,14 @@ const IndexPage = () => (
       })}
     >
       <Wrapper>
-        <h1>
+        <h1
+          {...css({
+            '@media (min-width: 1000px)': {
+              textAlign: 'center',
+              marginBottom: '50px',
+            },
+          })}
+        >
           Calm Your Mind;
           <br />
           Don't Lose It
@@ -295,6 +319,15 @@ const IndexPage = () => (
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+
+            '@media (min-width: 700px)': {
+              marginBottom: '40px',
+            },
+
+            '@media (min-width: 1000px)': {
+              flexDirection: 'row',
+              justifyContent: 'space-around',
+            },
           })}
         >
           <Card>
@@ -306,7 +339,11 @@ const IndexPage = () => (
             <img
               src={arrow}
               alt="arrow"
-              {...css({ height: '50px', transform: 'rotate(90deg)' })}
+              {...css({
+                height: '50px',
+                transform: 'rotate(90deg)',
+                '@media (min-width: 1000px)': { transform: 'rotate(0deg)' },
+              })}
             />
           </div>
           <Card>

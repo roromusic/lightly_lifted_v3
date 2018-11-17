@@ -22,6 +22,10 @@ const NavItems = styled('ul')`
   font-size: 1.2rem;
   color: var(--body-text);
   list-style: none;
+
+  @media (min-width: 1000px) {
+    font-size: 1.4rem;
+  }
 `
 
 const Header = ({ siteTitle }) => (
