@@ -13,12 +13,12 @@ import heart from '../images/heart.svg'
 import fireworks from '../images/fireworks.svg'
 import cafeS from '../images/cafe-s.jpg'
 import dropS from '../images/drop-s.jpg'
-import citrusS from '../images/citrus-s.jpg'
-import coffeeS from '../images/coffee-s.jpg'
 import dropper from '../images/dropper.svg'
 import shaker from '../images/shaker.svg'
 import arrow from '../images/arrow.svg'
 import check from '../images/check.svg'
+import poolS from '../images/pool-s.jpg'
+import livingS from '../images/living-s.jpg'
 
 const css = (...args) => ({ className: emoCSS(...args) })
 
@@ -287,7 +287,7 @@ const IndexPage = () => (
             </p>
           </div>
           <div {...css({ textAlign: 'center' })}>
-            <img src={citrusS} alt="lightly lifted with coffee" width="100%" />
+            <img src={livingS} alt="lightly lifted with coffee" width="100%" />
           </div>
         </Description>
         <Description>
@@ -301,7 +301,7 @@ const IndexPage = () => (
             </p>
           </div>
           <div {...css({ textAlign: 'center' })}>
-            <img src={coffeeS} alt="lightly lifted with coffee" width="100%" />
+            <img src={poolS} alt="lightly lifted poolside" width="100%" />
           </div>
         </Description>
       </Wrapper>
@@ -346,7 +346,9 @@ const IndexPage = () => (
               })}
             />
           </div>
-          <Card>
+          <Card
+            {...css({ '@media (min-width: 1000px)': { alignSelf: 'stretch' } })}
+          >
             <img src={shaker} alt="shaker" {...css({ height: '90px' })} />
             <p>Swish around for 2-3 seconds then enjoy.</p>
           </Card>

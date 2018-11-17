@@ -4,6 +4,7 @@ import { css as emoCSS } from 'emotion'
 import styled from 'react-emotion'
 
 import logo from '../images/logo.svg'
+import ig from '../images/ig.svg'
 
 const css = (...args) => ({ className: emoCSS(...args) })
 
@@ -28,6 +29,9 @@ const Footer = () => {
           <br />
           (415)-577-3702
         </p>
+        <a href="https://www.instagram.com/lightly_lifted/" target="_blank">
+          <img src={ig} alt="instagram" width="20px" />
+        </a>
       </div>
       <div {...css({ padding: '10px', p: { fontSize: '14px' } })}>
         <p>
