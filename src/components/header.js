@@ -12,6 +12,10 @@ const Container = styled('header')`
   margin: 0 auto;
   padding: 10px;
   display: flex;
+
+  @media (min-width: 700px) {
+    padding: 20px;
+  }
 `
 
 const NavItems = styled('ul')`

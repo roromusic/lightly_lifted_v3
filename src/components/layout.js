@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import 'typeface-fira-sans'
 
 import Header from './header'
+import Footer from './footer'
 import './normalize.css'
 import './global.css'
 
@@ -32,6 +33,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>{children}</div>
+        <Footer />
       </>
     )}
   />
