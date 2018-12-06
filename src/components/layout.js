@@ -6,6 +6,7 @@ import 'typeface-fira-sans'
 
 import Header from './header'
 import Footer from './footer'
+import Modal from './modal'
 import './normalize.css'
 import './global.css'
 
@@ -33,6 +34,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>{children}</div>
+        <Modal />
         <Footer />
       </>
     )}
